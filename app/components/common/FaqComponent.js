@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, Image, ImageBackground, TouchableOpacity, Platform } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import { RFPercentage } from 'react-native-responsive-fontsize';
-import { AntDesign } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
 //config
@@ -14,7 +12,6 @@ function FaqComponent({ ques, ans }) {
 
     return (
         <>
-
             <View style={{ width: '100%' }} >
                 <View style={{ flexDirection: 'row', height: RFPercentage(8), borderRadius: RFPercentage(2), borderColor: Colors.inputFieldBackgroundColor, borderWidth: RFPercentage(0.1), width: '90%', justifyContent: 'flex-start', alignItems: 'center', alignSelf: 'center', backgroundColor: Colors.white }} >
                     {/* Drop Down */}
@@ -45,7 +42,6 @@ function FaqComponent({ ques, ans }) {
                     null
                 }
             </View>
-
         </>
     );
 }

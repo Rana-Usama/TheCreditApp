@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, Image, TouchableOpacity, Platform, ScrollView, ImageBackground, StyleSheet } from 'react-native'
 import { AntDesign } from '@expo/vector-icons';
 import { RFPercentage } from 'react-native-responsive-fontsize';
+import { Ionicons } from '@expo/vector-icons';
 
 //components
 import Screen from './../components/Screen';
@@ -34,8 +35,8 @@ function AboutUsScreen(props) {
 
             {/* Nav */}
             <View style={{ marginTop: RFPercentage(1.7), width: '90%', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }} >
-                <TouchableOpacity onPress={() => props.navigation.openDrawer()} activeOpacity={0.8} style={{ position: 'absolute', left: 0 }} >
-                    <AntDesign name="menu-unfold" style={{ fontSize: RFPercentage(3) }} color={Colors.primary} />
+                <TouchableOpacity onPress={() => props.navigation.navigate('HomeScreen')} activeOpacity={0.8} style={{ position: 'absolute', left: 0 }} >
+                    <Ionicons name="ios-chevron-back" style={{ fontSize: RFPercentage(3.5) }} color={Colors.primary} />
                 </TouchableOpacity>
                 <Text style={{ color: Colors.primary, fontSize: RFPercentage(3), fontWeight: Platform.OS == 'android' ? 'bold' : '600' }} >
                     About Us

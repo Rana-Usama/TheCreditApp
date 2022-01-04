@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { Platform, Text, TouchableOpacity, View, Image, ScrollView, ImageBackground } from "react-native";
 import { RFPercentage } from "react-native-responsive-fontsize";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 //config
 import Colors from "../../config/Colors";
-import FaqScreen from './../../screens/FaqScreen';
 
 function AppDrawer({ navigation }) {
     const items = [
@@ -30,9 +29,8 @@ function AppDrawer({ navigation }) {
         {
             id: 4,
             label: "Contact Us",
-            icon: 'contacts-outline'
-
-            // path: "AdvertisementScreen"
+            icon: 'contacts-outline',
+            path: "ContactUs"
         },
         {
             id: 5,

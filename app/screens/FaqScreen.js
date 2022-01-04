@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
-import { View, Text, Image, ImageBackground, TouchableOpacity, Platform, ScrollView } from 'react-native'
+import React from 'react';
+import { View, Text, TouchableOpacity, Platform, ScrollView } from 'react-native'
 import { RFPercentage } from 'react-native-responsive-fontsize';
-import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
 
 //components
 import Screen from './../components/Screen';

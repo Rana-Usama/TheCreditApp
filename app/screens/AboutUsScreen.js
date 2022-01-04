@@ -46,18 +46,18 @@ function AboutUsScreen(props) {
             <ScrollView style={{ flex: 1, width: '100%' }} >
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%' }}>
 
-                    {/* Deatils */}
+                    {/* Deatils listings */}
                     {listData.map((item, i) => (
                         <View key={i} style={{ marginLeft: i == 2 ? RFPercentage(3) : RFPercentage(0), width: '100%', justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }} >
-                            <View style={{ marginTop: RFPercentage(10), width: '96%', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', alignSelf: 'center' }} >
+                            <View style={{ marginTop: RFPercentage(6), width: '96%', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', alignSelf: 'center' }} >
                                 <Image style={{ width: i == 2 ? RFPercentage(6) : RFPercentage(10), height: i == 2 ? RFPercentage(6) : RFPercentage(10) }} source={item.imageSource} />
                                 <View style={{ width: '80%', marginLeft: RFPercentage(1) }} >
-                                    <Text style={{ marginLeft: i == 2 ? RFPercentage(2) : RFPercentage(0), fontSize: RFPercentage(2.3), color: Colors.black }} >
+                                    <Text style={{ marginLeft: i == 2 ? RFPercentage(2) : RFPercentage(0), fontSize: RFPercentage(2.2), color: Colors.black }} >
                                         {item.data}
                                     </Text>
                                 </View>
                             </View>
-                            <Text style={{ marginTop: i == 2 ? RFPercentage(3) : RFPercentage(-1), fontSize: RFPercentage(2.7), fontWeight: Platform.OS == 'android' ? 'bold' : '700', color: Colors.black }} >
+                            <Text style={{ marginTop: i == 2 ? RFPercentage(3) : RFPercentage(-1), fontSize: RFPercentage(2.6), fontWeight: Platform.OS == 'android' ? 'bold' : '700', color: Colors.black }} >
                                 {item.money}
                             </Text>
                         </View>
@@ -82,7 +82,7 @@ function AboutUsScreen(props) {
                     <View style={{ flexDirection: 'row', marginTop: RFPercentage(4), width: '90%', alignSelf: 'center', justifyContent: 'center', alignItems: 'center' }} >
                         <AntDesign name="rightcircleo" style={{ position: 'absolute', top: RFPercentage(0.5), left: 0, fontSize: RFPercentage(2.7) }} color={Colors.secondary} />
 
-                        <Text style={{ marginLeft: RFPercentage(4), fontSize: RFPercentage(2), color: Colors.black, lineHeight: RFPercentage(3.1) }} >
+                        <Text style={{ marginLeft: RFPercentage(4), fontSize: RFPercentage(2.2), color: Colors.black, lineHeight: RFPercentage(3.1) }} >
                             The Credit App allows contractors, small business owners,
                             and sole proprietors to report defaults and nonpayments from
                             their customers directly to the in credit bureaus. With this service

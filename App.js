@@ -13,6 +13,7 @@ import AppDrawer from './app/components/common/AppDrawer';
 
 //config
 import Colors from './app/config/Colors';
+import FaqScreen from './app/screens/FaqScreen';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -24,6 +25,7 @@ export default function App() {
     return <Drawer.Navigator screenOptions={{ headerShown: false, drawerPosition: 'right' }} initialRouteName="HomeScreen" overlayColor="transparent" edgeWidth={100} drawerStyle={{ backgroundColor: Colors.white, width: "75%" }} drawerContent={(props) => <AppDrawer {...props} />}  >
       <Drawer.Screen name="HomeScreen" component={HomeScreen} />
       <Drawer.Screen name="AboutUsScreen" component={AboutUsScreen} />
+      <Drawer.Screen name="FaqScreen" component={FaqScreen} />
     </Drawer.Navigator>
   }
 

@@ -5,6 +5,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 //config
 import Colors from "../../config/Colors";
+import FaqScreen from './../../screens/FaqScreen';
 
 function AppDrawer({ navigation }) {
     const items = [
@@ -23,10 +24,8 @@ function AppDrawer({ navigation }) {
         {
             id: 3,
             label: "FAQ",
-            icon: 'frequently-asked-questions'
-
-
-            // path: "NotificationsScreen"
+            icon: 'frequently-asked-questions',
+            path: "FaqScreen"
         },
         {
             id: 4,

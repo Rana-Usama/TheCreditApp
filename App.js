@@ -6,6 +6,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer"
 //screens
 import HomeScreen from './app/screens/HomeScreen';
 import LoginScreen from './app/screens/LoginScreen';
+import AboutUsScreen from './app/screens/AboutUsScreen';
 
 //components
 import AppDrawer from './app/components/common/AppDrawer';
@@ -22,6 +23,7 @@ export default function App() {
   const HomeDrawer = () => {
     return <Drawer.Navigator screenOptions={{ headerShown: false, drawerPosition: 'right' }} initialRouteName="HomeScreen" overlayColor="transparent" edgeWidth={100} drawerStyle={{ backgroundColor: Colors.white, width: "75%" }} drawerContent={(props) => <AppDrawer {...props} />}  >
       <Drawer.Screen name="HomeScreen" component={HomeScreen} />
+      <Drawer.Screen name="AboutUsScreen" component={AboutUsScreen} />
     </Drawer.Navigator>
   }
 

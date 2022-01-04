@@ -38,9 +38,8 @@ function AppDrawer({ navigation }) {
         {
             id: 5,
             label: "About Us",
-            icon: 'file-table-outline'
-
-            // path: "HomeScreen"
+            icon: 'file-table-outline',
+            path: "AboutUsScreen"
         },
         {
             id: 6,

@@ -13,7 +13,6 @@ import Colors from '../config/Colors';
 
 function HomeScreen(props) {
 
-
     const firstListings = [
         {
             data: 'Upload the information and documents of the customer that is in default.',
@@ -45,7 +44,6 @@ function HomeScreen(props) {
 
     ]
 
-
     return (
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.white }}>
 
@@ -60,6 +58,7 @@ function HomeScreen(props) {
             </View>
 
             {/* Scroll Starts */}
+
             <ScrollView style={{ flex: 1, width: '100%' }} >
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%' }}>
                     <Text style={{ color: Colors.primary, fontSize: RFPercentage(3.4), marginTop: RFPercentage(6), fontWeight: Platform.OS == 'android' ? 'bold' : '600' }} >
@@ -103,7 +102,7 @@ function HomeScreen(props) {
                     </Text>
                 </View>
 
-                {/* Points */}
+                {/* Points Maping */}
 
                 {firstListings.map((item, i) => (
                     <View key={i} style={{ justifyContent: 'flex-start', alignItems: 'center', alignSelf: 'center', width: '100%' }}>
@@ -122,7 +121,6 @@ function HomeScreen(props) {
                         }
                     </View>
                 ))}
-
 
             </ScrollView>
 

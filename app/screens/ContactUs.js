@@ -26,10 +26,10 @@ function ContactUs(props) {
 
             <View style={{ marginTop: RFPercentage(4), width: '90%', alignSelf: 'center', justifyContent: 'center', alignItems: 'center' }} >
                 <Text style={{ color: Colors.black, fontSize: RFPercentage(3), fontWeight: Platform.OS == 'android' ? 'bold' : '500' }} >
-                    Report Nonpayments to
+                    Report Nonpayments to the
                 </Text>
-                <Text style={{ color: Colors.black, fontSize: RFPercentage(3), marginTop: RFPercentage(-0.3), fontWeight: Platform.OS == 'android' ? 'bold' : '500' }} >
-                    the Credit Bureaus
+                <Text style={{ color: Colors.black, fontSize: RFPercentage(3), marginTop: RFPercentage(0), fontWeight: Platform.OS == 'android' ? 'bold' : '500' }} >
+                    Credit Bureaus
                 </Text>
             </View>
 

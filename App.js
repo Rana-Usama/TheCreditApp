@@ -12,6 +12,8 @@ import AboutUsScreen from './app/screens/AboutUsScreen';
 import AppDrawer from './app/components/common/AppDrawer';
 import FaqScreen from './app/screens/FaqScreen';
 import ContactUs from './app/screens/ContactUs';
+import NotificationsScreen from './app/screens/NotificationsScreen';
+import ShopScreen from './app/screens/ShopScreen';
 
 //config
 import Colors from './app/config/Colors';
@@ -28,6 +30,8 @@ export default function App() {
       <Drawer.Screen name="AboutUsScreen" component={AboutUsScreen} />
       <Drawer.Screen name="FaqScreen" component={FaqScreen} />
       <Drawer.Screen name="ContactUs" component={ContactUs} />
+      <Drawer.Screen name="NotificationsScreen" component={NotificationsScreen} />
+      <Drawer.Screen name="ShopScreen" component={ShopScreen} />
     </Drawer.Navigator>
   }
 

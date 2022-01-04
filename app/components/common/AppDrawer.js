@@ -17,8 +17,8 @@ function AppDrawer({ navigation }) {
         {
             id: 1,
             label: "Shop",
-            icon: 'shopping-outline'
-            // path: "MyChannelScreen"
+            icon: 'shopping-outline',
+            path: "ShopScreen"
         },
         {
             id: 3,
@@ -41,16 +41,14 @@ function AppDrawer({ navigation }) {
         {
             id: 6,
             label: "Facebook",
-            icon: 'facebook'
-
-            // path: "NotificationsScreen"
+            icon: 'facebook',
+            // path: "https://www.google.com/"
         },
         {
             id: 6,
             label: "Notification Center",
-            icon: 'notification-clear-all'
-
-            // path: "NotificationsScreen"
+            icon: 'notification-clear-all',
+            path: "NotificationsScreen"
         },
 
     ]

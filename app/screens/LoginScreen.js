@@ -214,7 +214,7 @@ function LoginScreen(props) {
                                     </View>
 
                                     {/* Login button */}
-                                    <View style={{ width: "100%", alignItems: "center", marginTop: RFPercentage(7) }}>
+                                    <View style={{ width: "100%", alignItems: "center", marginTop: RFPercentage(5) }}>
                                         <MyAppButton
                                             title="Login"
                                             padding={RFPercentage(1.5)}

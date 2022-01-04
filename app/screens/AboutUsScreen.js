@@ -33,16 +33,15 @@ function AboutUsScreen(props) {
     return (
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.white }}>
 
-            {/* Nav */}
-            <View style={{ marginTop: RFPercentage(1.7), width: '90%', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }} >
+            {/* NavBar */}
+            <View style={styles.navContainer}>
                 <TouchableOpacity onPress={() => props.navigation.navigate('HomeScreen')} activeOpacity={0.8} style={{ position: 'absolute', left: 0 }} >
                     <Ionicons name="ios-chevron-back" style={{ fontSize: RFPercentage(3.5) }} color={Colors.primary} />
                 </TouchableOpacity>
-                <Text style={{ color: Colors.primary, fontSize: RFPercentage(3), fontWeight: Platform.OS == 'android' ? 'bold' : '600' }} >
+                <Text style={{ fontSize: RFPercentage(2.6), fontWeight: '700', color: Colors.black }}>
                     About Us
                 </Text>
             </View>
-
 
             <ScrollView style={{ flex: 1, width: '100%' }} >
                 <View style={{ justifyContent: 'center', alignItems: 'center', width: '100%' }}>
@@ -116,6 +115,13 @@ const styles = StyleSheet.create({
         bottom: 0,
         backgroundColor: "rgba(0,0,0,0.4)"
     },
+    navContainer: {
+        marginTop: RFPercentage(5),
+        width: '90%',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
 })
 
 export default AboutUsScreen;

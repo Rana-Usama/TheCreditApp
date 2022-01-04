@@ -1,6 +1,7 @@
 const Colors = {
     primary: "#001D3B",
     secondary: "#07aac9",
+    twoButtons: '#F5F5F5',
     primaryLight2: "rgba(0, 29, 59, 0.6)",
     inputFieldBackgroundColor: "#E2E8F0",
     secondaryLight: "rgba(8, 170, 201, 0.3)",

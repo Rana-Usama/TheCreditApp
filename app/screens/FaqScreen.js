@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Platform, ScrollView } from 'react-native'
+import { View, Text, TouchableOpacity, Platform, ScrollView, StyleSheet } from 'react-native'
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -52,12 +52,12 @@ function FaqScreen(props) {
     return (
         <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.white }}>
 
-            {/* Nav */}
-            <View style={{ marginTop: RFPercentage(1.7), width: '90%', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', alignSelf: 'center' }} >
+            {/* NavBar */}
+            <View style={styles.navContainer}>
                 <TouchableOpacity onPress={() => props.navigation.navigate('HomeScreen')} activeOpacity={0.8} style={{ position: 'absolute', left: 0 }} >
                     <Ionicons name="ios-chevron-back" style={{ fontSize: RFPercentage(3.5) }} color={Colors.primary} />
                 </TouchableOpacity>
-                <Text style={{ color: Colors.primary, fontSize: RFPercentage(3), fontWeight: Platform.OS == 'android' ? 'bold' : '600' }} >
+                <Text style={{ fontSize: RFPercentage(2.6), fontWeight: '700', color: Colors.black }}>
                     FAQ
                 </Text>
             </View>
@@ -79,5 +79,15 @@ function FaqScreen(props) {
         </Screen>
     );
 }
+
+const styles = StyleSheet.create({
+    navContainer: {
+        marginTop: RFPercentage(5),
+        width: '90%',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+})
 
 export default FaqScreen;

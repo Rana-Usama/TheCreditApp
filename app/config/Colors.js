@@ -1,16 +1,18 @@
-export default {
-    primary: "#215185",
-    darkGrey2: '#2D2D2D',
-    newInputFieldBorder: '#DEDEDE',
-    grey: "#d5d5d5",
-    twoButtons: '#F5F5F5',
-    blue: '#3A82FF',
-    darkGrey: '#707070',
-    inputFieldBorder: "#393939",
-    inputFieldBackgroundColor: "#efefef",
-    inputFieldPlaceholder: "#9AA3AE",
+const Colors = {
+    primary: "#001D3B",
+    secondary: "#08AAC9",
+    primaryLight2: "rgba(0, 29, 59, 0.6)",
+    inputFieldBackgroundColor: "#E2E8F0",
+    secondaryLight: "rgba(8, 170, 201, 0.3)",
+    black: "#000",
     white: "#fff",
-    black: "black",
-    lightBlue: '#C0FAEB',
-    useNameScreenTopView: '#d218a7'
-};
+    medium: "#6e6969",
+    light: "#f8f4f4",
+    dark: "#0c0c0c",
+    danger: "#ff5252",
+    lightGrey: "rgba(184, 185, 187, 0.1)",
+    mediumGrey: "#b2b2b2",
+    grey: "#808080",
+    danger: "#d62f2f"
+}
+export default Colors;

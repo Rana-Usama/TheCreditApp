@@ -3,7 +3,7 @@ import { Platform, SafeAreaView, StyleSheet, StatusBar } from "react-native";
 //config
 import Colors from "../config/Colors";
 
-function Screen({ children, statusBarColor = Colors.primary, style }) {
+function Screen({ children, statusBarColor = '#2c5580', style }) {
   return (
     <SafeAreaView style={[styles.screen, style]}>
       {Platform.OS === "android" ? <StatusBar backgroundColor={statusBarColor} barStyle="dark-content" /> : null}

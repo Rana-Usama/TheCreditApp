@@ -1,18 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { Text, View, TouchableOpacity, ImageStatusBar, StyleSheet, Animated, ScrollView, Dimensions, Image, Platform, StatusBar } from 'react-native';
+import React, { useState } from 'react';
+import { Text, View, TouchableOpacity, StyleSheet, ScrollView, Image, Platform, StatusBar } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import { Octicons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
-
 // components
 import AppTextInput from "../components/common/AppTextInput"
-import AppTextButton from "../components/common/AppTextButton"
+import MyAppButton from './../components/common/MyAppButton';
 import LoadingModal from '../components/common/LoadingModal';
+import Screen from './../components/Screen';
 
 // config
 import Colors from "../config/Colors"
-
 
 function LoginScreen(props) {
 
@@ -23,7 +22,6 @@ function LoginScreen(props) {
     const [tick, setTick] = useState(false);
 
     const [indicator, showIndicator] = useState(false);
-
 
     const [inputField, setInputFeild] = useState([
         {
@@ -49,7 +47,6 @@ function LoginScreen(props) {
         tempFeilds[id].value = text;
         setInputFeild(tempFeilds);
     }
-
 
     const handleLogin = () => {
         showIndicator(true);
@@ -140,9 +137,8 @@ function LoginScreen(props) {
     };
 
     return (
-        <View style={styles.container}>
+        <Screen style={{ flex: 1, justifyContent: 'flex-start', alignItems: "center", backgroundColor: Colors.white }}>
 
-            <StatusBar style="light" barStyle="light-content" translucent={true} backgroundColor={Colors.primary} />
             {/* Wecome Text */}
             <View style={{ backgroundColor: Colors.primary, width: "100%", flex: 0.78, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }} >
                 <Text style={{ color: Colors.white, fontSize: RFPercentage(4) }}>
@@ -176,10 +172,7 @@ function LoginScreen(props) {
 
                             {active == '1' ?
 
-
-
-
-
+                                // Login
 
                                 <View style={styles.container}>
 
@@ -221,15 +214,18 @@ function LoginScreen(props) {
                                     </View>
 
                                     {/* Login button */}
-                                    <View style={{ width: "90%", marginTop: RFPercentage(5), justifyContent: 'center', alignItems: 'center' }} >
-                                        <AppTextButton
-                                            name="Login"
+                                    <View style={{ width: "100%", alignItems: "center", marginTop: RFPercentage(7) }}>
+                                        <MyAppButton
+                                            title="Login"
+                                            padding={RFPercentage(1.5)}
                                             onPress={() => handleLogin()}
                                             backgroundColor={Colors.primary}
-                                            width="80%"
+                                            color={Colors.white}
+                                            bold={false}
+                                            borderRadius={RFPercentage(1.3)}
+                                            width={"70%"}
                                         />
                                     </View>
-
 
                                     {/* Heading */}
                                     <View style={styles.heading} >
@@ -238,8 +234,8 @@ function LoginScreen(props) {
                                         </Text>
                                     </View>
 
+                                    {/* Social Links */}
                                     <View style={styles.socialLinksContainer} >
-                                        {/* google */}
                                         <TouchableOpacity activeOpacity={0.8} style={styles.google}>
                                             <FontAwesome name="google" style={{ fontSize: RFPercentage(3) }} color={Colors.white} />
                                         </TouchableOpacity>
@@ -275,33 +271,32 @@ function LoginScreen(props) {
                                         </View>
                                     )}
 
-                                    {/* Login button */}
-                                    <View style={{ marginBottom: RFPercentage(4), width: "90%", marginTop: RFPercentage(6), justifyContent: 'center', alignItems: 'center' }} >
-                                        <AppTextButton
-                                            name="Signup"
-                                            onPress={() => handleLogin2()}
+                                    {/* Sign Up button */}
+                                    <View style={{ marginBottom: RFPercentage(4), width: "100%", alignItems: "center", marginTop: RFPercentage(7) }}>
+                                        <MyAppButton
+                                            title="Sign Up"
+                                            padding={RFPercentage(1.5)}
+                                            // onPress={() => handleLogin()}
                                             backgroundColor={Colors.primary}
-                                            width="80%"
+                                            color={Colors.white}
+                                            bold={false}
+                                            borderRadius={RFPercentage(1.3)}
+                                            width={"70%"}
                                         />
                                     </View>
                                 </View>
-
-
-
                             }
 
                         </View>
-
                     </ScrollView>
                 </View>
             </View>
-        </View>
+        </Screen>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
-        // marginTop: Constants.statusBarHeight,
         flex: 1,
         backgroundColor: Colors.white,
         alignItems: 'center',
@@ -336,7 +331,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'flex-start',
         alignSelf: 'center',
-        marginTop: RFPercentage(3.5)
+        marginTop: RFPercentage(3)
     },
     rememberMe: {
         marginLeft: RFPercentage(1),
@@ -348,7 +343,8 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         alignSelf: 'center',
-        marginTop: RFPercentage(2)
+        marginTop: RFPercentage(2),
+        marginBottom: RFPercentage(5)
     },
     google: {
         position: 'absolute',

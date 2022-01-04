@@ -62,15 +62,15 @@ function AppDrawer({ navigation }) {
     return (
         <View style={{ flex: 1, width: '100%', position: 'absolute' }}  >
 
-            <ImageBackground style={{ width: '100%', height: RFPercentage(28), justifyContent: 'center', alignItems: 'center' }} source={require('../../../assets/images/top2.png')} >
+            <ImageBackground style={{ width: '100%', height: Platform.OS == 'android' ? RFPercentage(30) : RFPercentage(28), justifyContent: 'center', alignItems: 'center' }} source={require('../../../assets/images/top2.png')} >
                 <View style={{ alignSelf: 'center', justifyContent: 'center', marginTop: RFPercentage(2) }}>
-                    <TouchableOpacity activeOpacity={0.8} >
+                    <TouchableOpacity activeOpacity={0.8} style={{ marginTop: RFPercentage(1) }} >
                         <Image style={{ width: RFPercentage(15), height: RFPercentage(15) }} source={require('../../../assets/images/profile.png')} />
                     </TouchableOpacity>
                     <Text style={{ alignSelf: 'center', marginTop: RFPercentage(1.5), color: Colors.white, fontWeight: 'bold' }} >
                         Robert C
                     </Text>
-                    <Text style={{ alignSelf: 'center', marginTop: RFPercentage(0.5), color: '#F8DCDC' }} >
+                    <Text style={{ alignSelf: 'center', marginTop: RFPercentage(0.5), color: Colors.inputFieldBackgroundColor }} >
                         abc@mail.com
                     </Text>
                 </View>
@@ -80,12 +80,12 @@ function AppDrawer({ navigation }) {
 
                 {items.map((item, index) => (
                     <View key={index} style={{ marginTop: index === 0 ? RFPercentage(4) : RFPercentage(4.2), justifyContent: 'center', alignItems: "center", flexDirection: 'row' }} >
-                        <MaterialCommunityIcons name={item.icon} style={{ fontSize: RFPercentage(3) }} color={Colors.primary} />
+                        <MaterialCommunityIcons name={item.icon} style={{ fontSize: RFPercentage(3.3) }} color={Colors.primary} />
                         <View style={{ alignItems: "center", width: "70%" }} >
                             <TouchableOpacity activeOpacity={0.7} onPress={() => {
                                 navigation.navigate(item.path)
                             }} style={{ alignSelf: "flex-start", flexDirection: "row", justifyContent: "center", alignItems: "center" }} >
-                                <Text style={{ marginLeft: RFPercentage(1), color: Colors.black, fontSize: RFPercentage(2.2) }} >{item.label}</Text>
+                                <Text style={{ marginLeft: RFPercentage(1), color: Colors.black, fontSize: RFPercentage(2.3) }} >{item.label}</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

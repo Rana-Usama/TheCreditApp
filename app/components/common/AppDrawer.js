@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Platform, Text, TouchableOpacity, View, Image, ScrollView, ImageBackground } from "react-native";
 import { RFPercentage } from "react-native-responsive-fontsize";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 //config
 import Colors from "../../config/Colors";
@@ -9,33 +10,51 @@ function AppDrawer({ navigation }) {
     const items = [
         {
             id: 0,
-            label: "Bookmarks",
+            label: "Home",
+            icon: 'home-variant-outline'
             // path: "ProfileScreen"
         },
         {
             id: 1,
-            label: "History",
+            label: "Shop",
+            icon: 'shopping-outline'
             // path: "MyChannelScreen"
         },
         {
             id: 3,
-            label: "History",
+            label: "FAQ",
+            icon: 'frequently-asked-questions'
+
+
             // path: "NotificationsScreen"
         },
         {
             id: 4,
-            label: "Settings",
+            label: "Contact Us",
+            icon: 'contacts-outline'
+
             // path: "AdvertisementScreen"
         },
         {
             id: 5,
-            label: "Messages",
+            label: "About Us",
+            icon: 'file-table-outline'
+
             // path: "HomeScreen"
         },
         {
             id: 6,
-            label: "Notification",
-            path: "NotificationsScreen"
+            label: "Facebook",
+            icon: 'facebook'
+
+            // path: "NotificationsScreen"
+        },
+        {
+            id: 6,
+            label: "Notification Center",
+            icon: 'notification-clear-all'
+
+            // path: "NotificationsScreen"
         },
 
     ]
@@ -60,8 +79,8 @@ function AppDrawer({ navigation }) {
             <ScrollView style={{ flex: 1, width: '100%' }} >
 
                 {items.map((item, index) => (
-                    <View key={index} style={{ marginTop: index === 0 ? RFPercentage(4) : RFPercentage(5), justifyContent: 'center', alignItems: "center", flexDirection: 'row' }} >
-                        <Image style={{ width: item.width, height: item.height }} source={item.icon} />
+                    <View key={index} style={{ marginTop: index === 0 ? RFPercentage(4) : RFPercentage(4.2), justifyContent: 'center', alignItems: "center", flexDirection: 'row' }} >
+                        <MaterialCommunityIcons name={item.icon} style={{ fontSize: RFPercentage(3) }} color={Colors.primary} />
                         <View style={{ alignItems: "center", width: "70%" }} >
                             <TouchableOpacity activeOpacity={0.7} onPress={() => {
                                 navigation.navigate(item.path)
@@ -73,10 +92,11 @@ function AppDrawer({ navigation }) {
                 ))}
 
                 {/* Logout */}
-                <View style={{ marginLeft: RFPercentage(0.6), marginTop: RFPercentage(3.3), justifyContent: 'center', alignItems: "center", flexDirection: 'row' }} >
+                <View style={{ marginLeft: RFPercentage(-1.5), marginTop: RFPercentage(4.2), justifyContent: 'center', alignItems: "center", flexDirection: 'row' }} >
                     <View style={{ alignItems: "center", width: "70%" }} >
                         <TouchableOpacity onPress={() => { navigation.navigate('RegisterScreen') }} activeOpacity={0.7} style={{ alignSelf: "flex-start", flexDirection: "row", justifyContent: "center", alignItems: "center" }} >
-                            <Text style={{ marginLeft: RFPercentage(1), color: Colors.black, fontSize: RFPercentage(2.2) }} >
+                            <MaterialCommunityIcons name="logout-variant" size={24} color={Colors.primary} />
+                            <Text style={{ marginLeft: RFPercentage(1), color: Colors.black, fontSize: RFPercentage(2.2), fontWeight: Platform.OS == 'android' ? 'bold' : '600' }} >
                                 Logout
                             </Text>
                         </TouchableOpacity>

@@ -123,7 +123,7 @@ function LoginScreen(props) {
         showIndicator(true);
         let tempfeilds = [...inputField];
 
-        if (tempfeilds[0].value === "" || tempfeilds[1].value === "" || tempfeilds[2].value === "" || tempfeilds[3].value === "") {
+        if (tempfeilds[0].value === "" || tempfeilds[1].value === "" || tempfeilds[2].value === "" || tempfeilds[3].value === "" || tempfeilds[4].value === "") {
             alert("Please fill all the feilds !");
             showIndicator(false);
             return true;
@@ -138,9 +138,6 @@ function LoginScreen(props) {
 
         showIndicator(false);
     };
-
-
-
 
     return (
         <View style={styles.container}>
